@@ -4,7 +4,7 @@ class Animal {
     }
 
     eat() {
-        console.log(`${this.name} eats`);
+        return(`${this.name} eats`);
     }
 }
 
@@ -14,7 +14,7 @@ class Dog extends Animal {
     }
 
     sounds() {
-        console.log(`${this.name} barks`);
+        return(`Dog barks`);
     }
 }
 
@@ -24,7 +24,7 @@ class Cat extends Animal {
     }
 
     sounds() {
-        console.log(`${this.name} meows`);
+        return(`Cat meows`);
     }
 }
 
@@ -40,26 +40,18 @@ class Home {
     }
 }
 
-var dog = new Dog("Rax");
-
-dog.eat();
-dog.sounds();
-
-var cat = new Cat("Stormy");
-
-cat.eat();
-cat.sounds();
-
 var home = new Home();
-var dog1 = new Dog("dog1");
-var cat = new Cat("cat");
+var dog1 = new Dog();
+var dog2 = new Dog();
+var cat = new Cat();
 
-home.makeAllSounds(); //outputs nothing
+
+home.makeAllSounds();
 home.adoptPet(dog1);
 home.makeAllSounds();
 
 home.adoptPet(cat);
 home.makeAllSounds();
 
-home.adoptPet(dog1);
+home.adoptPet(dog2);
 home.makeAllSounds();
